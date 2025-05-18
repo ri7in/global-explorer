@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-cockpit-dark text-cockpit-light-text font-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for a more modern feel (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1B2130; /* cockpit-charcoal */
+}
+::-webkit-scrollbar-thumb {
+  background: #00AFFF; /* cockpit-hud */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0077cc; /* A slightly darker hud blue */
+}
