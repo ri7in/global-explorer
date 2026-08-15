@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext, useCallback } from 'react';
-import { getAllCountries, getCountryByName, getCountriesByRegion, getCountryByCode } from '../services/countryService';
+import { getAllCountries, getCountryByCode } from '../services/countryService';
 
 const CountryContext = createContext();
 

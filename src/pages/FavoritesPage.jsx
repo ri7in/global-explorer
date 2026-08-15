@@ -11,7 +11,7 @@ import { ChevronLeft, ListX } from 'lucide-react';
 
 const FavoritesPage = () => {
   const { favorites: favoriteCodes, isAuthenticated, currentUser } = useAuth();
-  const { allCountries: cachedAllCountries, fetchCountryDetails, setSelectedCountryDetails, isModalOpen, setIsModalOpen } = useAllCountriesData();
+  const { allCountries: cachedAllCountries } = useAllCountriesData();
   const [favoriteCountriesData, setFavoriteCountriesData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

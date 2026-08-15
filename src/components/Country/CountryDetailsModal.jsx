@@ -7,9 +7,11 @@ import Spinner from '../Common/Spinner';
 // Corrected import: Removed GlobeAsia, will use Globe
 import { MapPin, Users, Languages, Globe, Landmark, Coins, Clock, Compass, Map, Star, ExternalLink } from 'lucide-react';
 
-const DetailItem = ({ icon: Icon, label, value, className = '' }) => (
+const DetailItem = ({ icon, label, value, className = '' }) => (
   <div className={`flex items-start py-2 ${className}`}>
-    <Icon className="w-5 h-5 text-cockpit-hud mr-3 mt-1 flex-shrink-0" />
+    {React.createElement(icon, {
+      className: 'w-5 h-5 text-cockpit-hud mr-3 mt-1 flex-shrink-0',
+    })}
     <div>
       <span className="font-semibold text-cockpit-dim-text">{label}:</span>
       <span className="ml-2 text-cockpit-light-text">{value || 'N/A'}</span>
@@ -18,7 +20,7 @@ const DetailItem = ({ icon: Icon, label, value, className = '' }) => (
 );
 
 const CountryDetailsModal = () => {
-  const { selectedCountryDetails: country, setSelectedCountryDetails, isModalOpen, setIsModalOpen, loading: contextLoading } = useCountries();
+  const { selectedCountryDetails: country, setSelectedCountryDetails, isModalOpen, setIsModalOpen } = useCountries();
   const { isAuthenticated, addFavorite, removeFavorite, isFavorite } = useAuth();
 
   if (!country) return null;
