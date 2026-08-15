@@ -1,5 +1,7 @@
 # Global Explorer - REST Countries API Frontend
 
+> University coursework fork associated with [@ri7in](https://github.com/ri7in).
+
 ## Overview
 
 Global Explorer is a React-based frontend application that allows users to browse, search, and learn about countries around the world using data from the [REST Countries API](https://restcountries.com/). This project showcases skills in modern frontend development, API integration, state management, and responsive design, featuring an aviation-inspired "cockpit" theme.
